@@ -1,0 +1,5 @@
+Schema
+
+User(user_id, name, user_details)
+FriendList(uID, fID)
+Slam(slam_id, uID, q1,q2,qn)
