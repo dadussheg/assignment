@@ -1,11 +1,21 @@
 package com.slambook.model;
 
+import java.util.Date;
+
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 
 public class UserDetails {
 	private String firstName;
 	private String middleName;
 	private String surName;
+	private Date dateOfBirth;
+	
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 	public String getFirstName() {
 		return firstName;
 	}

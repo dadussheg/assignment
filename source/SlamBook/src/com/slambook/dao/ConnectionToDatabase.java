@@ -1,41 +1,60 @@
 
 package com.slambook.dao;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
-import java.util.logging.Logger;
+import java.util.Properties;
+
+import org.apache.log4j.Logger;
+
 /**
  * @author aditya
  *
  */
 public class ConnectionToDatabase {
-	private String database = "slambook";
-	private String user = "root";
-	private String password = "system";
+	private String database = "";
+	private String user = "";
+	private String password = "";
+	private String driverClass = "";
+	private String url = "";
 	private static Logger logger;
 	public Connection connection = null;
 
 	public ConnectionToDatabase() {
-		
+		Properties properties = new Properties();
+		InputStream inputStream = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/" + database, user, password);
+			inputStream = new FileInputStream("src/resources/application.properties");
+			properties.load(inputStream);
+			database = properties.getProperty("jdbc.database");
+			user = properties.getProperty("jdbc.username");
+			password = properties.getProperty("jdbc.password");
+			driverClass = properties.getProperty("jdbc.driver.class");
+			url = properties.getProperty("jdbc.url");
+			Class.forName(driverClass);
+			connection = DriverManager.getConnection(url + database, user, password);
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} catch (ClassNotFoundException classNotFoundException) {
 			classNotFoundException.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
 			try {
-				connection.close();
-			} catch (SQLException e) {
+				inputStream.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
-		} catch (SQLException sqlException) {
-			sqlException.printStackTrace();
-			try {
-				connection.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
-
 	}
 
 }
