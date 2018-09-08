@@ -1,0 +1,8 @@
+#Files to ignore
+*.class
+RemoteSystemsTempFiles/
+Servers/
+source/SlamBook/build/
+.metadata/
+.recommenders/
+
