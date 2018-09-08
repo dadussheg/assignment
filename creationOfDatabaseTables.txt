@@ -1,0 +1,14 @@
+Step 1 :- Go to MySql
+
+Step 2 :- Create database as follows 
+			"create database slambook;"(without double quotes)
+
+Step 3 :- Create "user_details" table as follows
+			"create table user_details(user_details_id bigint unsigned auto_increment primary key,first_name varchar(255),middle_name varchar(255),
+			surname varchar(255),date_of_birth date,contact_no bigint unsigned);"(without double quotes)
+
+Step 4 :- "alter table user_details add column(created_datetime datetime,updated_datetime datetime);"
+
+Step 5 :- "create table user_profile(user_profile_id bigint unsigned auto_increment,user_details_id bigint unsigned,email varchar(255),
+			password varchar(32),primary key(user_profile_id,email), foreign key(user_details_id) references user_details(user_details_id));"
+			
