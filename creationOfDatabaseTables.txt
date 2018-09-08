@@ -11,4 +11,6 @@ Step 4 :- "alter table user_details add column(created_datetime datetime,updated
 
 Step 5 :- "create table user_profile(user_profile_id bigint unsigned auto_increment,user_details_id bigint unsigned,email varchar(255),
 			password varchar(32),primary key(user_profile_id,email), foreign key(user_details_id) references user_details(user_details_id));"
+
+Step 6 :- "alter table user_profile add column updated_datetime datetime;"
 			

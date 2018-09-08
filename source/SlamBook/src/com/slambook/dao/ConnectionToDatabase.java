@@ -56,9 +56,5 @@ public class ConnectionToDatabase {
 
 		}
 	}
-	public static void main(String[] args){
-		new ConnectionToDatabase();
-		System.out.println("successfull");
-	}
 
 }

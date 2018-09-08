@@ -3,6 +3,7 @@ package com.slambook.service;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.slambook.core.constants.Constants;
 import com.slambook.dao.ConnectionToDatabase;
 import com.slambook.model.UserProfile;
 
@@ -47,6 +48,35 @@ public class RegistrationServiceImpl implements RegistrationService {
 		}
 
 		return result;
+	}
+
+	@Override
+	public void save(UserProfile userProfile) {
+		int result = Constants.ZERO;
+		connectionToDatabase = new ConnectionToDatabase();
+		try {
+			preparedStatement = connectionToDatabase.connection.prepareStatement("insert into user_profile(user_details_id,email,password) values(?,?,?);");
+			preparedStatement.setString(1, "");
+			preparedStatement.setString(2, "");
+			preparedStatement.setString(3, "");
+			result = preparedStatement.executeUpdate();
+			
+		} catch (SQLException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				resultSet.close();
+				connectionToDatabase.connection.close();
+				preparedStatement.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
+		}
+		
+		
 	}
 
 }

@@ -13,4 +13,6 @@ public class Constants {
 	//Constant int
 	public static int INDIA_ID = 1;
 	public static int JAPAN_ID = 2;
+	public static int ZERO = 0;
+	public static int ONE = 1;
 }
