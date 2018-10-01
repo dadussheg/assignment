@@ -11,8 +11,9 @@
 </head>
 <body>
 <span id="spn"></span>
-<h2>Locale Check</h2>
+<h2><fmt:message key="welcome.message" bundle="${bundle}"></fmt:message></h2>
 <input type="radio" value="1" name="language" id = "english"/>${englishName}
 <input type="radio" value = "2" name="language" id = "japanese">${japaneseName}
+<span><fmt:message key="welcome.message" bundle="${bundle}"></fmt:message></span>
 </body>
 </html>

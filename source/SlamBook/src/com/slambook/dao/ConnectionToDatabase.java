@@ -10,6 +10,9 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
+import com.slambook.core.util.SlambookListener;
+import com.sun.corba.se.impl.ior.GenericTaggedComponent;
+
 /**
  * @author aditya
  *
@@ -22,13 +25,15 @@ public class ConnectionToDatabase {
 	private String url = "";
 	private static Logger logger;
 	public Connection connection = null;
-
+	SlambookListener listener;
+	//SlambookListener listener = SlambookListener.getInstance(getServletContext());
 	public ConnectionToDatabase() {
+		//logger.debug("from constructor :- "+listener.getProperty("welcome.message"));
 		Properties properties = new Properties();
 		InputStream inputStream = null;
 		try {
-			inputStream = new FileInputStream("src/resources/application.properties");
-			properties.load(inputStream);
+			//inputStream = new FileInputStream("/resources/application.properties");
+			properties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("/resources/application.properties"));
 			database = properties.getProperty("jdbc.database");
 			user = properties.getProperty("jdbc.username");
 			password = properties.getProperty("jdbc.password");
@@ -38,7 +43,7 @@ public class ConnectionToDatabase {
 			connection = DriverManager.getConnection(url + database, user, password);
 		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			logger.error("Error :-"+e1);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -47,12 +52,12 @@ public class ConnectionToDatabase {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			try {
+			/*try {
 				inputStream.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			}*/
 
 		}
 	}

@@ -3,6 +3,8 @@ package com.slambook.service;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.apache.log4j.BasicConfigurator;
+
 import com.slambook.core.constants.Constants;
 import com.slambook.dao.ConnectionToDatabase;
 import com.slambook.model.UserProfile;
@@ -13,11 +15,18 @@ import com.slambook.model.UserProfile;
  */
 public class RegistrationServiceImpl implements RegistrationService {
 	private ConnectionToDatabase connectionToDatabase = null;
-	ResultSet resultSet = null;
-	java.sql.PreparedStatement preparedStatement = null;
+	private ResultSet resultSet = null;
+	private java.sql.PreparedStatement preparedStatement = null;
+	static {
+		BasicConfigurator.configure();
+	}
 
-	/* (non-Javadoc)
-	 * @see com.slambook.service.RegistrationService#isAlreadyRegistered(com.slambook.model.UserProfile)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.slambook.service.RegistrationService#isAlreadyRegistered(com.slambook
+	 * .model.UserProfile)
 	 */
 	@Override
 	public boolean isAlreadyRegistered(UserProfile userProfile) {
@@ -55,14 +64,15 @@ public class RegistrationServiceImpl implements RegistrationService {
 		int result = Constants.ZERO;
 		connectionToDatabase = new ConnectionToDatabase();
 		try {
-			preparedStatement = connectionToDatabase.connection.prepareStatement("insert into user_profile(user_details_id,email,password) values(?,?,?);");
+			preparedStatement = connectionToDatabase.connection
+					.prepareStatement("insert into user_profile(user_details_id,email,password) values(?,?,?);");
 			preparedStatement.setString(1, "");
 			preparedStatement.setString(2, "");
 			preparedStatement.setString(3, "");
 			result = preparedStatement.executeUpdate();
-			
+
 		} catch (SQLException e) {
-			
+
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
@@ -75,8 +85,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 			}
 
 		}
-		
-		
+
 	}
 
 }

@@ -13,4 +13,6 @@ Step 5 :- "create table user_profile(user_profile_id bigint unsigned auto_increm
 			password varchar(32),primary key(user_profile_id,email), foreign key(user_details_id) references user_details(user_details_id));"
 
 Step 6 :- "alter table user_profile add column updated_datetime datetime;"
+
+Step 7 :- " alter table user_profile add column user_name varchar(255) after user_details_id;"
 			

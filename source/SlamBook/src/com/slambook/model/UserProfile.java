@@ -7,6 +7,7 @@ import org.apache.commons.lang.builder.ReflectionToStringBuilder;
  *
  */
 public class UserProfile {
+	private Long userProfileId;
 	private String email;
 	public String getEmail() {
 		return email;
@@ -76,6 +77,13 @@ public class UserProfile {
 	public String toString() {
 		return ReflectionToStringBuilder.toString(this);
 	}
+	public Long getUserProfileId() {
+		return userProfileId;
+	}
+	public void setUserProfileId(Long userProfileId) {
+		this.userProfileId = userProfileId;
+	}
+	
 	
 
 }
