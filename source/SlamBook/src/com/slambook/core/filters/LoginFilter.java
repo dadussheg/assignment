@@ -41,6 +41,7 @@ public class LoginFilter implements Filter {
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		logger.debug("locale :- "+Localization.getLocale());
+		
 		if(/*username.isEmpty() || password.isEmpty() ||*/ username==null || password==null){
 			logger.debug("locale :- "+Localization.getLocale());
 			Localization.setBundle(ResourceBundle.getBundle("resources.messages", Localization.getLocale()));

@@ -81,10 +81,14 @@ public class LoginController extends HttpServlet {
 		logger.debug("username :- "+username+" "+"password :- "+password);
 		loginService = new LoginServiceImpl();
 		boolean result=loginService.login(username, password);
-		if(result){
-			
-		}
 		req.setAttribute("bundle", Localization.getLocalizationContext());
+		if(result){
+			req.getSession().setAttribute("username", username);
+		}else{
+			req.setAttribute("error", Localization.getBundle().getString("MSGLOGIN002"));
+			req.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(req, resp);
+		}
+		
 
 	}
 	

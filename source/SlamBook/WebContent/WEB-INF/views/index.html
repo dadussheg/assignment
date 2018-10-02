@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
-<script  src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script  src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script
+	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 <title>Insert title here</title>
 <script type="text/javascript">
 var thLength;
 var table;
-var sum=0;
+var sum=1000.000.00;
 	$(document).ready(function(){
 		sum=100.00+200.56
+		alert($.isNumeric(sum));
 		alert("toFixed:- "+sum.toFixed(2))		
 		thLength = $('#table_id th').length;
 		console.log('thLength :- '+thLength);
@@ -109,435 +114,439 @@ var sum=0;
 		<div style="margin-left: 620px;">Right</div>
 	</div>
 	<table id="table_id" class="display">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>MeetingRoom</th>
-            <th>7</th>
-            <th>8</th>
-            <th>11</th>
-            <th>12</th>
-            <th>13</th>
-            <th>14</th>
-            <th>15</th>
-            <th>16</th>
-            <th>17</th>
-            <th>18</th>
-            <th>19</th>
-            <th>20</th>
-            <th>21</th>
-            <th>22</th>
-            <th>23</th>
-            <th>24</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1bgnlshi Data 1</td>
-            <td>Row 1,.df.ngl Data 2</td>
-            <td>Row 1 Dgalksgabfata 1</td>
-            <td>Rfmngli</td>
-            <td>a,fsgperghfjer8</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>2</td>
-            <td>M-102</td>
-            <td>gadfg</td>
-            <td>agdfbdfg</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>dgbsgfhnhrgt</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>4</td>
-            <td>M-102</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>6</td>
-            <td>M-102</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>8</td>
-            <td>M-102</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>10</td>
-            <td>M-102</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>12</td>
-            <td>M-102</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>14</td>
-            <td>M-102</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>15</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>16</td>
-            <td>M-102</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>17</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>18</td>
-            <td>M-102</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>19</td>
-            <td>M-101</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-           <td>20</td>
-            <td>M-102</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        </tbody>
-</table>
-<button id="btn">ConvertPdf</button>
-<input type="text" id="num" maxlength="10"/><br>
-<input type="text" disabled id = "totalEarning"><br>
-<input type="text" disabled id="totalDeduction"/><br>
-<input type="text" disabled id="netPay"/><br> 
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>MeetingRoom</th>
+				<th>7</th>
+				<th>8</th>
+				<th>11</th>
+				<th>12</th>
+				<th>13</th>
+				<th>14</th>
+				<th>15</th>
+				<th>16</th>
+				<th>17</th>
+				<th>18</th>
+				<th>19</th>
+				<th>20</th>
+				<th>21</th>
+				<th>22</th>
+				<th>23</th>
+				<th>24</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1bgnlshi Data 1</td>
+				<td>Row 1,.df.ngl Data 2</td>
+				<td>Row 1 Dgalksgabfata 1</td>
+				<td>Rfmngli</td>
+				<td>a,fsgperghfjer8</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>M-102</td>
+				<td>gadfg</td>
+				<td>agdfbdfg</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>dgbsgfhnhrgt</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>M-102</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>M-102</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>M-102</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>M-102</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>11</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>12</td>
+				<td>M-102</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>13</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>14</td>
+				<td>M-102</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>15</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>16</td>
+				<td>M-102</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>17</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>18</td>
+				<td>M-102</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>19</td>
+				<td>M-101</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+			<tr>
+				<td>20</td>
+				<td>M-102</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+				<td>Row 1 Data 1</td>
+				<td>Row 1 Data 2</td>
+			</tr>
+		</tbody>
+	</table>
+	<button id="btn">ConvertPdf</button>
+	<input type="text" id="num" maxlength="10" />
+	<br>
+	<input type="text" disabled id="totalEarning">
+	<br>
+	<input type="text" disabled id="totalDeduction" />
+	<br>
+	<input type="text" disabled id="netPay" />
+	<br>
 </body>
 </html>

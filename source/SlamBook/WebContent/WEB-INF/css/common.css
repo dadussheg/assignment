@@ -1,7 +1,30 @@
-.abc{
-	color:#ff0000;
+.abc {
+	color: #ff0000;
 }
-#error_message{
+
+#error_message {
 	font-size: 12px;
-		background-color: white;
+	background-color: white;
+}
+
+.error_message {
+	font-size: 12px;
+	color: red;
+	font-family: serif;
+	background-color: #EEE3E1;
+	
+}
+.outer_div{
+	background-color: #EEE3E1;
+	 margin-right: 500px; 
+	 margin-left: 500px;
+	 height: 150px; 
+	 margin-top: 200px
+}
+.error_span{
+	margin-left: 30px;
+}
+.login_table{
+	border-spacing: 3px; 
+	padding: 5px
 }

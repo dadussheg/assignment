@@ -26,7 +26,6 @@ public class LoginServiceImpl implements LoginService{
 			preparedStatement.setString(1, username);
 			preparedStatement.setString(2, password);
 			resultSet = preparedStatement.executeQuery();
-			logger.debug("result set :- "+resultSet);
 			if (resultSet.next()){
 				logger.debug("user profile id :- "+resultSet.getString("user_profile_id"));
 				result = Boolean.TRUE;

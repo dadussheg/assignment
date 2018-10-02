@@ -1,23 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <%@page import="java.util.ResourceBundle"%>
-<%@page import="java.util.Locale" %>
+<%@page import="java.util.Locale"%>
 <%@page import="org.apache.taglibs.standard.tag.el.fmt.*"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style type="text/css">
-.common{
-	color:red;
+.common {
+	color: red;
 }
-.xyzy{
-     background-color: #ddd;
-     cursor: not-allowed;
+
+.xyzy {
+	background-color: #ddd;
+	cursor: not-allowed;
 }
 </style>
 <script type="text/javascript">
@@ -101,59 +104,180 @@
 </script>
 </head>
 <body>
-<h1>
-</h1>
-<form action="<%=request.getContextPath()%>/login" method="get" id="form">
-<input type="submit" value="SUBMIT" id="english" name="language"/>${englishName}
-<input type="radio" value="" id="japanese"/>${japaneseName}
-</form>
-<table border="2px" class="abc">
-<thead>
-<tr>
-<th>25</th>
-<th>30</th>
-<th>46</th>
-<th>55</th></tr>
-</thead>
-<tbody>
-<tr><td class="common">sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-<tr><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-<tr><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-<tr><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-<tr id="smth"><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-</tbody>
-</table>
-<br>
-<table border="2px" class="xyz">
-<thead>
-<tr>
-<th>MeetingRoomName</th>
-<th>ID</th>
-<th>09:00</th>
-<th>09:30</th>
-<th>10:00</th>
-<th>10:30</th>
-<th>11:00</th>
-<th>11:30</th>
-<th>12:00</th>
-<th>12:30</th>
-<th>13:00</th>
-<th>13:30</th>
-<th>14:00</th>
-<th>14:30</th>
-<th>15:00</th>
-<th>15:30</th>
-<th>16:00</th>
-<th>16:30</th>
-</tr>
-</thead>
-<tbody>
-<tr><td></td><td></td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-<tr><td></td><td></td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-<tr><td></td><td></td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-<tr><td></td><td></td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-<tr><td></td><td></td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td><td>sfsfg</td><td>vxbvc</td><td>sgf</td><td>cvbxch</td></tr>
-</tbody>
-</table>
+	<h1></h1>
+	<form action="<%=request.getContextPath()%>/login" method="get"
+		id="form">
+		<input type="submit" value="SUBMIT" id="english" name="language" />${englishName}
+		<input type="radio" value="" id="japanese" />${japaneseName}
+	</form>
+	<table border="2px" class="abc">
+		<thead>
+			<tr>
+				<th>25</th>
+				<th>30</th>
+				<th>46</th>
+				<th>55</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="common">sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+			<tr>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+			<tr>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+			<tr>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+			<tr id="smth">
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<table border="2px" class="xyz">
+		<thead>
+			<tr>
+				<th>MeetingRoomName</th>
+				<th>ID</th>
+				<th>09:00</th>
+				<th>09:30</th>
+				<th>10:00</th>
+				<th>10:30</th>
+				<th>11:00</th>
+				<th>11:30</th>
+				<th>12:00</th>
+				<th>12:30</th>
+				<th>13:00</th>
+				<th>13:30</th>
+				<th>14:00</th>
+				<th>14:30</th>
+				<th>15:00</th>
+				<th>15:30</th>
+				<th>16:00</th>
+				<th>16:30</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+				<td>sfsfg</td>
+				<td>vxbvc</td>
+				<td>sgf</td>
+				<td>cvbxch</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
