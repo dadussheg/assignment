@@ -28,10 +28,7 @@ public class LoginController extends HttpServlet {
 	private String value;
 	private LoginService loginService=null;
 	static {
-		Localization.setLocale(new Locale(Locale.US.toString(), Locale.ENGLISH.toString()));
-		//Localization.setBundle(ResourceBundle.getBundle("resources.messages", Localization.getLocale()));
-		//Localization.setLocalizationContext(new LocalizationContext(Localization.getBundle(), Localization.getLocale()));
-
+		Localization.setLocale(new Locale(Locale.US.toString(), Locale.ENGLISH.toString()));		
 	}
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
@@ -42,7 +39,6 @@ public class LoginController extends HttpServlet {
 			throws ServletException, IOException {
 		SlambookListener listener = SlambookListener.getInstance(getServletContext());
 		BasicConfigurator.configure();
-		System.out.println(("from LoginController"));
 		logger.debug("value :-"+listener.getProperty("contextPath"));
 		String reqLaguage = request.getParameter("language");
 		int language = 0;
@@ -50,18 +46,13 @@ public class LoginController extends HttpServlet {
 			language = Integer.parseInt(reqLaguage);
 			if (language == (Constants.INDIA_ID)) {
 				Localization.setLocale(new Locale(Locale.US.toString(), Locale.ENGLISH.toString()));
-				//logger.debug("from if : ");
 				System.out.println(("from if : "));
-				//Localization.setDefaultLocale(Localization.getLocale());
 			}if (language == Constants.JAPAN_ID) {
-				//logger.debug("from else if : ");
-				System.out.println(("from else if : "));
 				Localization.setLocale(new Locale(Locale.JAPAN.toString(), Locale.JAPANESE.toString()));
 			}
 		}
 		Localization.setDefaultLocale(Localization.getLocale());
 		logger.debug("locale set to :- " + Localization.getDefaultLocale());
-		//getServletContext().setInitParameter("bundle", ResourceBundle.getBundle("resources.messages", Localization.getLocale()).toString());
 		Localization.setBundle(ResourceBundle.getBundle("resources.messages", Localization.getLocale()));
 		Localization.setLocalizationContext(new LocalizationContext(Localization.getBundle(), Localization.getLocale()));
 		request.setAttribute("englishName", Localization.getBundle().getString("home.english"));
@@ -72,7 +63,6 @@ public class LoginController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		logger.debug("from LoginController post() :- ");

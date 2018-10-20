@@ -15,6 +15,7 @@
 	href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<c:set var="contextPath" value="${ pageContext.request.contextPath}" scope="application" />
 <script type="text/javascript">
 <%@include file = "/WEB-INF/js/common.js"%>
 </script>
@@ -59,7 +60,7 @@
 </script>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath}/login" method="post">
+	<form action="${contextPath}/login" method="post">
 		<div class = "outer_div">
 			<div style='margin-bottom: 10px; text-align: center;'>
 				<strong><fmt:message key="login.login" bundle="${bundle}" /></strong>
@@ -97,9 +98,12 @@
 						<td></td>
 						<td><input type="submit"
 							value='<fmt:message key="login.signin" bundle="${bundle}"/>'
-							id="signIn" /> <a href="${pageContext.request.contextPath}/views/registration.jsp"><input type="button"
+							id="signIn" /><input type="button"
 							value='<fmt:message key="login.signup" bundle="${bundle}"/>'
-							id="signUp" /></a></td>
+							id="signUp" /></td>
+					</tr>
+					<tr>
+					<td><a href ="${contextPath}/forgetPassword"><fmt:message key="login.forget.password" bundle="${bundle}"/></a></td>
 					</tr>
 				</table>
 

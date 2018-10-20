@@ -31,6 +31,22 @@
 		<servlet-name>reg</servlet-name>
 		<url-pattern>/registration</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>forgetpassword</servlet-name>
+		<servlet-class>com.slambook.controller.ForgetPasswordController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>forgetpassword</servlet-name>
+		<url-pattern>/forgetPassword</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>resetpassword</servlet-name>
+		<servlet-class>com.slambook.controller.ResetPasswordController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>resetpassword</servlet-name>
+		<url-pattern>/resetPassword</url-pattern>
+	</servlet-mapping>
 	<context-param>
 		<param-name>contextPath</param-name>
 		<param-value>/sfkal</param-value>
@@ -38,8 +54,4 @@
 	<listener>
 		<listener-class>com.slambook.core.util.SlambookListener</listener-class>
 	</listener>
-	<context-param>
-		<param-name>bundle</param-name>
-		<param-value>resources.messages_en_us_EN</param-value>
-	</context-param>
 </web-app>

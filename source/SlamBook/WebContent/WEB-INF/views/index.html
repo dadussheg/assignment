@@ -7,6 +7,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 <script
 	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <link rel="stylesheet" type="text/css"
@@ -15,8 +16,21 @@
 <script type="text/javascript">
 var thLength;
 var table;
-var sum=1000.000.00;
+var sum=1200.19+2400.19;
 	$(document).ready(function(){
+		alert($.trim('   df   ').length);
+	/* 	$.mask.definitions['a'] = '[0123456789]';
+		$.mask.definitions['b'] = '[0123456789]';
+		$.mask.definitions['c'] = '[0123456789]';
+		$.mask.definitions['d'] = '[0123456789]';
+		$.mask.definitions['e'] = '[0123456789]';
+		$.mask.definitions['f'] = '[0123456789]';
+		$.mask.definitions['g'] = '[0123456789]';
+		$.mask.definitions['h'] = '[.]';
+		$.mask.definitions['i'] = '[0123456789]';
+		$.mask.definitions['j'] = '[0123456789]'; */
+		alert(sum.toFixed()+".00");
+		$('#num').mask("#######.##");
 		sum=100.00+200.56
 		alert($.isNumeric(sum));
 		alert("toFixed:- "+sum.toFixed(2))		
@@ -540,7 +554,7 @@ var sum=1000.000.00;
 		</tbody>
 	</table>
 	<button id="btn">ConvertPdf</button>
-	<input type="text" id="num" maxlength="10" />
+	<input type="text" id="num" maxlength="10"/>
 	<br>
 	<input type="text" disabled id="totalEarning">
 	<br>
