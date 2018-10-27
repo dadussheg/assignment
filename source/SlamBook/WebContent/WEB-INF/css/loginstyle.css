@@ -1,10 +1,10 @@
 @charset "UTF-8";
 body#LoginForm{ 
-	background-image:linear-gradient(rgb(104, 145, 162), rgb(97, 12, 40)); 
+	background-image:linear-gradient(rgb(104, 145, 162), rgb(13, 97, 40)); 
 	background-repeat:no-repeat; 
 	background-position:center; 	
 	background-size:cover; 
-	padding: 70px;}
+	padding: 86px;}
 
 .wrapper{
 	margin-top: 80px;
@@ -47,7 +47,12 @@ input[type="text"] {
 	}
 
 input[type="password"] {
+	  margin-top: 5px;
 	  margin-bottom: 20px;
 	  border-top-left-radius: 0;
 	  border-top-right-radius: 0;
 	}
+	
+.btn{
+    width: 154px;
+    }

@@ -64,7 +64,7 @@
 <body id="LoginForm">
 	<div class="wrapper">
 	<form action="${contextPath}/login" method="post" class="form-signin">
-				<h2><fmt:message key="login.login" bundle="${bundle}" /></h2>
+				<h2 class="form-signin-heading"><fmt:message key="login.login" bundle="${bundle}" /></h2>
 			
 			<c:if test="${not empty error}">
 				<div class="error_message error_span">
@@ -73,10 +73,13 @@
 			</c:if>
 			<fmt:message key="login.username" bundle="${bundle}" var="insertUsername" />
 			<fmt:message key="login.password" bundle="${bundle}" var="insertPassword"/>
-			<input type="text" class="form-control" name="username" placeholder="${insertUsername}"/>
-			<input type="password" class="form-control" name="password" placeholder="${insertPassword}" />
-			<button class="btn btn-md btn-primary btn-block" type="submit"><fmt:message key="login.signin" bundle="${bundle}"/></button> 
-			<button class="btn btn-md btn-primary btn-block" type="submit"><fmt:message key="login.signup" bundle="${bundle}"/></button>
+			<input type="text" class="form-control" name="username" placeholder="${insertUsername}" required="" autofocus=""/>
+			<input type="password" class="form-control" name="password" placeholder="${insertPassword}" required="" autofocus=""/>
+			<div class="btn-group">
+			<button class="btn btn-success" type="submit"><fmt:message key="login.signin" bundle="${bundle}"/></button> 
+			<button class="btn btn-primary" type="submit"><fmt:message key="login.signup" bundle="${bundle}"/></button>
+			</div>
+			<br/>
 			<a href ="${contextPath}/forgetPassword"><fmt:message key="login.forget.password" bundle="${bundle}"/></a> 
 		
 	</form>
