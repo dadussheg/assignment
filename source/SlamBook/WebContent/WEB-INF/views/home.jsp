@@ -61,7 +61,7 @@
 					});
 </script>
 </head>
-<body id="LoginForm">
+<body id="mainbody">
 	<div class="wrapper">
 	<form action="${contextPath}/login" method="post" class="form-signin">
 				<h2 class="form-signin-heading"><fmt:message key="login.login" bundle="${bundle}" /></h2>
