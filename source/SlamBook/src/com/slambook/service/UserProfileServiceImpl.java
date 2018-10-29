@@ -53,4 +53,27 @@ public class UserProfileServiceImpl implements UserProfileService {
 		return null;
 	}
 
+	@Override
+	public UserProfile findByEmail(String email) {
+		UserProfile userProfile = new UserProfile();
+		connectionToDatabase = new ConnectionToDatabase();
+		try {
+			preparedStatement = connectionToDatabase.connection.prepareStatement("select * from user_profile where email=?");
+			preparedStatement.setString(1,email);
+			resultSet = preparedStatement.executeQuery();		
+			logger.debug("result set : "+resultSet.next());
+			if(resultSet.next()){
+				userProfile.setEmail(resultSet.getString("email"));
+				userProfile.setUsername(resultSet.getString("user_name"));
+				userProfile.setUserProfileId(Long.parseLong(resultSet.getString("user_profile_id")));
+				logger.debug("resultset :- "+resultSet.getString("email"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return userProfile;
+	}
+
 }

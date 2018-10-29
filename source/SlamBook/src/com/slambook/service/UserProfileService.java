@@ -7,5 +7,6 @@ import com.slambook.model.UserProfile;
 public interface UserProfileService {
 	UserProfile findByUserProfileId(Long userProfileId);
 	List<UserProfile> findAll();
+	UserProfile findByEmail(String email);
 
 }

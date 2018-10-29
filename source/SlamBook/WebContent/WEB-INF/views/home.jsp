@@ -8,7 +8,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script
 	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
@@ -22,7 +21,6 @@
 </script>
 <style type="text/css">
 <%@include file="/WEB-INF/css/common.css"%>
-<%@include file="/WEB-INF/css/loginstyle.css"%>
 </style>
 <script type="text/javascript">
 	$(document)
@@ -61,28 +59,58 @@
 					});
 </script>
 </head>
-<body id="mainbody">
-	<div class="wrapper">
-	<form action="${contextPath}/login" method="post" class="form-signin">
-				<h2 class="form-signin-heading"><fmt:message key="login.login" bundle="${bundle}" /></h2>
-			
+<body>
+	<form action="${contextPath}/login" method="post">
+		<div class = "outer_div">
+			<div style='margin-bottom: 10px; text-align: center;'>
+				<strong><fmt:message key="login.login" bundle="${bundle}" /></strong>
+			</div>
 			<c:if test="${not empty error}">
 				<div class="error_message error_span">
 					<span id="err">${error}</span>
 				</div>
 			</c:if>
-			<fmt:message key="login.username" bundle="${bundle}" var="insertUsername" />
-			<fmt:message key="login.password" bundle="${bundle}" var="insertPassword"/>
-			<input type="text" class="form-control" name="username" placeholder="${insertUsername}" required="" autofocus=""/>
-			<input type="password" class="form-control" name="password" placeholder="${insertPassword}" required="" autofocus=""/>
-			<div class="btn-group">
-			<button class="btn btn-success" type="submit"><fmt:message key="login.signin" bundle="${bundle}"/></button> 
-			<button class="btn btn-primary" type="submit"><fmt:message key="login.signup" bundle="${bundle}"/></button>
+			<div style='margin-left: 30px'>
+				<table class = "login_table">
+					<tr>
+						<td><label> <fmt:message
+									key="login.username" bundle="${bundle}" />:-
+						</label></td>
+						<td>
+							<div id="userNameDiv">
+								<input type="text" id="username" name="username"/>
+								<div class="error_message"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><label> <fmt:message key="login.password"
+									bundle="${bundle}" />:-
+						</label></td>
+						<td>
+							<div id="passwordDiv">
+								<input type="password" id="password" name="password" />
+								<div class="error_message"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit"
+							value='<fmt:message key="login.signin" bundle="${bundle}"/>'
+							id="signIn" /><input type="button"
+							value='<fmt:message key="login.signup" bundle="${bundle}"/>'
+							id="signUp" /></td>
+					</tr>
+					<tr>
+					<td><a href ="${contextPath}/forgetPassword"><fmt:message key="login.forget.password" bundle="${bundle}"/></a></td>
+					</tr>
+				</table>
+
+
+
 			</div>
-			<br/>
-			<a href ="${contextPath}/forgetPassword"><fmt:message key="login.forget.password" bundle="${bundle}"/></a> 
-		
+		</div>
 	</form>
-	</div>
 </body>
 </html>
