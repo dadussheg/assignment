@@ -7,3 +7,4 @@ source/SlamBook/build/
 .recommenders/
 .bak
 source/SlamBook/.settings/
+source/SlamBook/.classpath

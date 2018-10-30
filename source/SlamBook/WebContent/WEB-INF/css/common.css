@@ -1,4 +1,4 @@
-.abc {
+.alert-class {
 	color: #ff0000;
 }
 
@@ -21,10 +21,13 @@
 	 height: 150px; 
 	 margin-top: 200px
 }
-.error_span{
-	margin-left: 30px;
-}
+/* .error_span{
+	margin-left: 10px;
+} */
 .login_table{
 	border-spacing: 3px; 
 	padding: 5px
+}
+.success-class{
+	color :green;
 }

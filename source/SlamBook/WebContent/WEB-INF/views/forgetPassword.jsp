@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html">
 <html>
 <head>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -15,6 +15,7 @@
 	href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <c:set var="contextPath" value="${ pageContext.request.contextPath}" scope="application" />
 <script type="text/javascript">
 <%@include file = "/WEB-INF/js/common.js"%>
@@ -28,20 +29,20 @@ var emailRegex = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
 $(document).ready(function(){
 	 $('#submit').click(function(event){
 		 $('#err').empty();
-		 $('#email').focus(function() {
-			hide_error($('#emailDiv'));
-		});
+		 $('#succ').empty();
 		if($('#email').val()==""){
-			show_error($('#emailDiv'),
+			show_error($('#email'),
 			'<fmt:message key="registration.field.required" bundle="${bundle}"/>');
 			event.preventDefault();
 		}else if(!emailRegex.test($('#email').val())){
-			show_error($('#emailDiv'),
+			show_error($('#email'),
 			'<fmt:message key="MSGLOGIN003" bundle="${bundle}"/>');
 			event.preventDefault();
 		}
 	});
 });
+function openUrl(){
+}
 </script>
 </head>
 <body id="mainbody">
@@ -51,14 +52,21 @@ $(document).ready(function(){
 		<h2 class="form-signin-heading"><fmt:message key="login.enter.email" bundle="${bundle}" /></h2>
 			
 			<c:if test="${not empty error}">
-				<div class="error_message error_span">
-					<span id="err">${error}</span>
+				<div class="error_span" id = "err">
+					<p class = "alert-class fa fa-info-circle">${error}</p>
 				</div>
 			</c:if>
-			
-			<fmt:message key="login.email" bundle="${bundle}" var="emailid" />
-			<input type="text" class="form-control" name="email" placeholder="${emailid}" autofocus=""/>
-			<button class="btn btn-primary btn-block" type="submit"><fmt:message key="login.submit" bundle="${bundle}"/></button>
+			<c:if test="${not empty success}">
+				<div class="error_span" id = "succ">
+					<p class = "success-class fa fa-check-circle">${success}</p>
+				</div>
+			</c:if>
+			<div>
+			<input type="text" class="form-control" id = "email" name="email" placeholder='<fmt:message key="login.email" bundle="${bundle}"/>'/>
+			<p class = "alert-class"><i class = "fa"></i></p>
+			</div>
+			<button class="btn btn-primary btn-block" type="submit" id = "submit"><fmt:message key="login.submit" bundle="${bundle}"/></button>
+			 <a role="button" href="${contextPath}/login"><fmt:message key="login.signin" bundle="${bundle}"/></a> 
 		
 		
 	</form>

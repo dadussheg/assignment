@@ -3,7 +3,6 @@ package com.slambook.service;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import com.slambook.dao.ConnectionToDatabase;
@@ -13,9 +12,6 @@ public class LoginServiceImpl implements LoginService{
 	private ResultSet resultSet = null;
 	private java.sql.PreparedStatement preparedStatement = null;
 	private Logger logger = Logger.getLogger(LoginServiceImpl.class);
-	static {
-		BasicConfigurator.configure();
-	}
 	@Override
 	public boolean login(String username, String password) {
 		logger.debug("from login :- ");

@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.jstl.fmt.LocalizationContext;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
@@ -30,9 +29,6 @@ public class ForgetPasswordController extends HttpServlet{
 	private Velocity velocity = new Velocity();
 	private UserProfileService userProfileService = new UserProfileServiceImpl();
 	final private Logger logger = Logger.getLogger(ForgetPasswordController.class);
-	static{
-		BasicConfigurator.configure();
-	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -76,7 +72,7 @@ public class ForgetPasswordController extends HttpServlet{
 			data = velocity.getData(context, template);
 			logger.debug("data : -"+data);
 			mailService.sendMail(Localization.getBundle().getString("MSGLOGIN006"), data,email);	
-			req.setAttribute("error",Localization.getBundle().getString("MSGLOGIN005"));
+			req.setAttribute("success",Localization.getBundle().getString("MSGLOGIN005"));
 			}catch(Exception ex){
 				logger.error("Error :- "+ex);
 				req.setAttribute("error",Localization.getBundle().getString("MSGLOGIN004"));

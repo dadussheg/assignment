@@ -28,7 +28,7 @@ public class ConnectionToDatabase {
 	/**
 	 * 
 	 */
-	public ConnectionToDatabase() {
+	public ConnectionToDatabase() {		
 		Properties properties = new Properties();
 		try {
 			properties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("/resources/application.properties"));

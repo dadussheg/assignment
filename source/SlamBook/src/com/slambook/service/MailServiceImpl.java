@@ -17,9 +17,6 @@ import com.slambook.controller.ForgetPasswordController;
 
 public class MailServiceImpl implements MailService{
 	final private Logger logger = Logger.getLogger(ForgetPasswordController.class);
-	static{
-		BasicConfigurator.configure();
-	}
 	@Override
 	public void sendMail(String subject,String content,String to) {
 		// TODO Auto-generated method stub

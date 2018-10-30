@@ -11,6 +11,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.jstl.fmt.LocalizationContext;
 
 import org.apache.log4j.BasicConfigurator;
@@ -35,13 +36,17 @@ public class LoginFilter implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		BasicConfigurator.configure();
+		//BasicConfigurator.configure();
 		logger.debug("from LoginFilter :- ");
 		HttpServletRequest req = (HttpServletRequest)request;
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		logger.debug("locale :- "+Localization.getLocale());
-		
+		HttpSession session=req.getSession();
+		if(session.getAttribute("username")==null){
+			logger.debug("setting session :- ");
+			session.setAttribute("username", username);
+		}
 		if(/*username.isEmpty() || password.isEmpty() ||*/ username==null || password==null){
 			logger.debug("locale :- "+Localization.getLocale());
 			Localization.setBundle(ResourceBundle.getBundle("resources.messages", Localization.getLocale()));

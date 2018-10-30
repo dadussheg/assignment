@@ -15,10 +15,6 @@ public class UserProfileServiceImpl implements UserProfileService {
 	private ResultSet resultSet = null;
 	private java.sql.PreparedStatement preparedStatement = null;
 	final private Logger logger = Logger.getLogger(LoginController.class);
-	static{
-		BasicConfigurator.configure();
-	}
-
 	@Override
 	public UserProfile findByUserProfileId(Long userProfileId) {
 		// TODO Auto-generated method stub
@@ -55,20 +51,20 @@ public class UserProfileServiceImpl implements UserProfileService {
 
 	@Override
 	public UserProfile findByEmail(String email) {
-		UserProfile userProfile = new UserProfile();
+		UserProfile userProfile =null; 
 		connectionToDatabase = new ConnectionToDatabase();
 		try {
 			preparedStatement = connectionToDatabase.connection.prepareStatement("select * from user_profile where email=?");
 			preparedStatement.setString(1,email);
 			resultSet = preparedStatement.executeQuery();		
-			logger.debug("result set : "+resultSet.next());
 			if(resultSet.next()){
+				userProfile = new UserProfile();
+				logger.debug("inside if:- ");
 				userProfile.setEmail(resultSet.getString("email"));
 				userProfile.setUsername(resultSet.getString("user_name"));
 				userProfile.setUserProfileId(Long.parseLong(resultSet.getString("user_profile_id")));
 				logger.debug("resultset :- "+resultSet.getString("email"));
 			}
-			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

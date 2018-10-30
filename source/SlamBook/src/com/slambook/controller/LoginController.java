@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.jstl.fmt.LocalizationContext;
 
 import org.apache.log4j.BasicConfigurator;
@@ -38,7 +39,7 @@ public class LoginController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		SlambookListener listener = SlambookListener.getInstance(getServletContext());
-		BasicConfigurator.configure();
+		//BasicConfigurator.configure();
 		logger.debug("value :-"+listener.getProperty("contextPath"));
 		String reqLaguage = request.getParameter("language");
 		int language = 0;
@@ -63,6 +64,8 @@ public class LoginController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		SlambookListener listener = SlambookListener.getInstance(getServletContext());
+		logger.debug("value :-"+listener.getProperty("contextPath"));
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		logger.debug("from LoginController post() :- ");
@@ -73,7 +76,6 @@ public class LoginController extends HttpServlet {
 		boolean result=loginService.login(username, password);
 		req.setAttribute("bundle", Localization.getLocalizationContext());
 		if(result){
-			req.getSession().setAttribute("username", username);
 		}else{
 			req.setAttribute("error", Localization.getBundle().getString("MSGLOGIN002"));
 			req.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(req, resp);
