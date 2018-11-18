@@ -8,3 +8,6 @@ source/SlamBook/build/
 .bak
 source/SlamBook/.settings/
 source/SlamBook/.classpath
+source/SlamBook/.settings/.jsdtscope
+source/SlamBook/.settings/org.eclipse.wst.common.component
+source/SlamBook/.settings/org.eclipse.wst.common.project.facet.core.xml
