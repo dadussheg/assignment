@@ -44,7 +44,7 @@ public class MailServiceImpl implements MailService{
 			Transport.send(message);
 			logger.debug("mail sent to :- "+to);
 		}catch(MessagingException e){
-			e.printStackTrace();
+		  logger.debug("Error while sending mail :- "+e);
 			
 		}
 		

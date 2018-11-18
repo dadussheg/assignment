@@ -15,4 +15,8 @@ Step 5 :- "create table user_profile(user_profile_id bigint unsigned auto_increm
 Step 6 :- "alter table user_profile add column updated_datetime datetime;"
 
 Step 7 :- " alter table user_profile add column user_name varchar(255) after user_details_id;"
+
+Step 8 :- "alter table user_details add column gender char(1) not null after contact_no;"
+
+Step 9 :- "update user_details set gender='M';"
 			

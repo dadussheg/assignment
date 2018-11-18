@@ -21,6 +21,7 @@ public class SlambookListener implements ServletContextListener{
 
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
+		logger.debug("from SlamBookListener contextInitialized():-");
 		 try {
 			 config.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("/resources/application.properties"));
 	        } catch (IOException e) {

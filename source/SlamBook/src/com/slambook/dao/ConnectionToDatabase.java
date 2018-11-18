@@ -39,6 +39,7 @@ public class ConnectionToDatabase {
 			url = properties.getProperty("jdbc.url");
 			Class.forName(driverClass);
 			connection = DriverManager.getConnection(url + database, user, password);
+			connection.setAutoCommit(Boolean.FALSE);
 		} catch (FileNotFoundException e1) {
 			logger.error("Error :-"+e1);
 		} catch (IOException e) {

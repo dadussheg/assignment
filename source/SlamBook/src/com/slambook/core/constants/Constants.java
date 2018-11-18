@@ -15,4 +15,7 @@ public class Constants {
 	public static int JAPAN_ID = 2;
 	public static int ZERO = 0;
 	public static int ONE = 1;
+	//Constant-Error
+	public static String STATUS_ERROR = "error";
+	public static String STATUS_SUCCESS = "success";
 }

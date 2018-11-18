@@ -43,10 +43,10 @@ public class LoginFilter implements Filter {
 		String password = req.getParameter("password");
 		logger.debug("locale :- "+Localization.getLocale());
 		HttpSession session=req.getSession();
-		if(session.getAttribute("username")==null){
+		/*if(session.getAttribute("username")!=null){
 			logger.debug("setting session :- ");
 			session.setAttribute("username", username);
-		}
+		}*/
 		if(/*username.isEmpty() || password.isEmpty() ||*/ username==null || password==null){
 			logger.debug("locale :- "+Localization.getLocale());
 			Localization.setBundle(ResourceBundle.getBundle("resources.messages", Localization.getLocale()));
